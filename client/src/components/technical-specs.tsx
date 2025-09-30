@@ -15,7 +15,7 @@ interface ProductSpec {
 
 export default function TechnicalSpecs() {
   const { data: specifications = [] } = useQuery<ProductSpec[]>({
-    queryKey: ["/api/specifications/crushers"],
+    queryKey: ["https://vikalp-gajjar1-0.onrender.com/api/specifications/crushers"],
   });
 
   // Mock data for demonstration since API might not return data initially

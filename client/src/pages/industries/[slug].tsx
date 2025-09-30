@@ -16,10 +16,10 @@ export default function IndustryPage() {
 
   // Fetch industries data from backend API
   const { data: industries, isLoading } = useQuery<Industry[]>({
-    queryKey: ['/api/industries'],
+    queryKey: ['https://vikalp-gajjar1-0.onrender.com/api/industries'],
     queryFn: async () => {
       try {
-        const response = await fetch('/api/industries');
+        const response = await fetch('https://vikalp-gajjar1-0.onrender.com/api/industries');
         if (!response.ok) {
           throw new Error('Failed to fetch industries');
         }

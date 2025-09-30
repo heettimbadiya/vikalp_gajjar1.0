@@ -19,10 +19,10 @@ export default function SolutionsPage() {
   
   // Fetch industries data from backend API with defensive error handling
   const { data: industries, isLoading: industriesLoading, error: industriesError } = useQuery<Industry[]>({
-    queryKey: ['/api/industries'],
+    queryKey: ['https://vikalp-gajjar1-0.onrender.com/api/industries'],
     queryFn: async () => {
       try {
-        const response = await fetch('/api/industries');
+        const response = await fetch('https://vikalp-gajjar1-0.onrender.com/api/industries');
         if (!response.ok) {
           throw new Error('Failed to fetch industries');
         }

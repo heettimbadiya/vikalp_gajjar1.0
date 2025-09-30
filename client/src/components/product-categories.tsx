@@ -18,7 +18,7 @@ interface Product {
 
 export default function ProductCategories() {
   const { data: products = [] } = useQuery<Product[]>({
-    queryKey: ["/api/products"],
+    queryKey: ["https://vikalp-gajjar1-0.onrender.com/api/products"],
   });
 
   const categories = [

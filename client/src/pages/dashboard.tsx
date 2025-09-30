@@ -45,9 +45,9 @@ export default function Dashboard() {
 
   // Fetch recent leads for live activity
   const { data: recentLeads } = useQuery({
-    queryKey: ['/api/leads/recent'],
+    queryKey: ['https://vikalp-gajjar1-0.onrender.com/api/leads/recent'],
     queryFn: async () => {
-      const response = await fetch('/api/leads/recent');
+      const response = await fetch('https://vikalp-gajjar1-0.onrender.com/api/leads/recent');
       if (!response.ok) throw new Error('Failed to fetch recent leads');
       return response.json();
     },
@@ -57,7 +57,7 @@ export default function Dashboard() {
   // Semantic search mutation
   const semanticSearch = useMutation({
     mutationFn: async (query: string) => {
-      const response = await fetch('/api/graphql', {
+      const response = await fetch('https://vikalp-gajjar1-0.onrender.com/api/graphql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
