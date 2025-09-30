@@ -3,6 +3,7 @@ import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import videoOptimization from "./video-optimization";
 import { performanceMonitor } from "./performance-monitor";
+import cors from "cors";
 
 const app = express();
 app.use(cors());
