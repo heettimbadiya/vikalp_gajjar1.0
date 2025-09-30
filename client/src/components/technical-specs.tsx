@@ -15,7 +15,7 @@ interface ProductSpec {
 
 export default function TechnicalSpecs() {
   const { data: specifications = [] } = useQuery<ProductSpec[]>({
-    queryKey: [`${import.meta.env.VITE_API_URL}/api/specifications/crushers`],
+    queryKey: ["/api/specifications/crushers"],
   });
 
   // Mock data for demonstration since API might not return data initially

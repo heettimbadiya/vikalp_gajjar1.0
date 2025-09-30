@@ -191,7 +191,7 @@ export default function ProductDetailPage() {
     const fetchProductData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products/${slug}`);
+        const response = await fetch(`/api/products/${slug}`);
         
         if (!response.ok) {
           throw new Error('Product not found');
