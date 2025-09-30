@@ -19,7 +19,7 @@ export default function IndustryPage() {
     queryKey: ['/api/industries'],
     queryFn: async () => {
       try {
-        const response = await fetch('/api/industries');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/industries`);
         if (!response.ok) {
           throw new Error('Failed to fetch industries');
         }

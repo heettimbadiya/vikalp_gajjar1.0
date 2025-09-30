@@ -16,7 +16,7 @@ export default function IndustryPage() {
   // Fetch industries data from backend API
   const { data: industries, isLoading } = useQuery<Industry[]>({
     queryKey: ['/api/industries'],
-    queryFn: () => fetch('/api/industries').then(res => res.json())
+    queryFn: () => fetch(`${import.meta.env.VITE_API_URL}/api/industries`).then(res => res.json())
   });
 
   const industry = industries?.find(ind => ind.id === slug);

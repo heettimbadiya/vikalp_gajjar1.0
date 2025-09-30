@@ -24,7 +24,7 @@ export default function Header() {
   useEffect(() => {
     const fetchProductsAndBuildMenu = async () => {
       try {
-        const response = await fetch('/api/menu-products');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/menu-products`);
         const data = await response.json();
         
         if (data.products) {
