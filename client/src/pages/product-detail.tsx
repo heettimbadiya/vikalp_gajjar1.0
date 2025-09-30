@@ -191,7 +191,7 @@ export default function ProductDetailPage() {
     const fetchProductData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`/api/products/${slug}`);
+        const response = await fetch(`https://vikalp-gajjar1-0.onrender.com/api/products/${slug}`);
         
         if (!response.ok) {
           throw new Error('Product not found');

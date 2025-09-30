@@ -35,7 +35,7 @@ export default function ArticleDetailPage() {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const response = await fetch(`/api/articles/${articleSlug}`);
+        const response = await fetch(`https://vikalp-gajjar1-0.onrender.com/api/articles/${articleSlug}`);
         if (!response.ok) {
           throw new Error('Article not found');
         }

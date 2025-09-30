@@ -42,7 +42,7 @@ export default function SolutionsPage() {
       formData.append('image', file);
       formData.append('industryId', industryId);
       
-      const response = await fetch('/api/upload-industry-image', {
+      const response = await fetch('https://vikalp-gajjar1-0.onrender.com/api/upload-industry-image', {
         method: 'POST',
         body: formData,
       });

@@ -27,7 +27,7 @@ export default function RelatedProducts({ currentProductId, currentCategory }: R
   useEffect(() => {
     const fetchRelatedProducts = async () => {
       try {
-        const response = await fetch('/api/products');
+        const response = await fetch('https://vikalp-gajjar1-0.onrender.com/api/products');
         const allProducts: Product[] = await response.json();
         
         // Logic for finding related products
