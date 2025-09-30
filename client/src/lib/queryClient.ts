@@ -5,7 +5,6 @@ async function throwIfResNotOk(res: Response) {
     throw new Error(`${res.status}: ${text}`);
   }
 }
-
 export async function apiRequest(
   method: string,
   url: string,
