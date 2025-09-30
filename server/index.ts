@@ -5,6 +5,7 @@ import videoOptimization from "./video-optimization";
 import { performanceMonitor } from "./performance-monitor";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
